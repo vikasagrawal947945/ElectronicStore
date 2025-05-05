@@ -1,3 +1,4 @@
+ import { Link } from "react-router-dom";
 function Item({ product }) {
    function trimContent(input, length) {
      return input.length > length
@@ -8,11 +9,13 @@ function Item({ product }) {
    return (
      <div className="h-[400px] w-[22%] bg-white rounded-xl shadow-md hover:shadow-xl transition-all p-5 flex flex-col justify-between border border-gray-200">
        {/* Product Image */}
+       <Link to={`/product/${product.id}`}>
        <img
          src={product.image}
          alt={product.title}
          className="h-[140px] w-[140px] object-contain mx-auto transition-transform duration-300 hover:scale-105"
        />
+      </Link>
  
        {/* Product Title */}
        <h3 className="mt-4 text-md font-semibold text-center text-gray-700">
