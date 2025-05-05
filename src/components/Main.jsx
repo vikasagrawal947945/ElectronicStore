@@ -2,7 +2,7 @@ import {createBrowserRouter , RouterProvider} from "react-router-dom";
 import Electronic from "./Home";
 import About from "../pages/About";
 import Cart from "../pages/Cart";
-import Login from "../pages/login";
+import Login from "../pages/Login";
 import First from "../pages/First";
 import SingleProduct from "./SingleProduct";
 const router = createBrowserRouter([
