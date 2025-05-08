@@ -5,6 +5,8 @@ import Cart from "../pages/Cart";
 import Login from "../pages/Login";
 import First from "../pages/First";
 import SingleProduct from "./SingleProduct";
+import CartProvider from "../contexts/cartProvider";
+import Notfound from "./Notfound";
 const router = createBrowserRouter([
   {
     path:"/",
@@ -34,6 +36,10 @@ const router = createBrowserRouter([
     {
       path :"/product/:id",
       element : <SingleProduct></SingleProduct>
+    },
+    {
+      path :"*",
+      element: <Notfound></Notfound>
     }
    ]
   },
@@ -43,7 +49,9 @@ const router = createBrowserRouter([
 function Main(){
    return (
     <>
+    <CartProvider>
     <RouterProvider router={router}></RouterProvider>
+    </CartProvider>
     </>
    )
 }

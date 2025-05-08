@@ -7,7 +7,9 @@ function Item({ product }) {
    }
  
    return (
-     <div className="h-[400px] w-[22%] bg-white rounded-xl shadow-md hover:shadow-xl transition-all p-5 flex flex-col justify-between border border-gray-200">
+    <div className="h-[310px] w-[22%] bg-white hover:bg-red-400 hover:text-black rounded-xl shadow-md hover:shadow-xl transition-all ease-linear  duration-[300ms] p-5 flex flex-col justify-between border border-gray-300">
+
+
        {/* Product Image */}
        <Link to={`/product/${product.id}`}>
        <img
@@ -28,15 +30,7 @@ function Item({ product }) {
          <p className="text-gray-400 text-sm capitalize">{product.category}</p>
        </div>
  
-       {/* Buttons */}
-       <div className="flex gap-3 mt-4">
-         <button className="flex-1 px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-sm font-medium transition">
-           Add to Cart
-         </button>
-         <button className="flex-1 px-4 py-2 bg-indigo-500 hover:bg-indigo-600 text-white rounded-lg text-sm font-medium transition">
-           Buy Now
-         </button>
-       </div>
+      
      </div>
    );
  }
